@@ -1,0 +1,16 @@
+RPF_KO_Rep1_clpd_tr.fastq.gz
+Could not locate a Bowtie index corresponding to basename "/data/users/lwuetschert/rnaseq_course/References/undesired_RNA.fasta"
+Overall time: 00:00:00
+Command: bowtie-align --wrapper basic-0 -t -S -p 4 --un RPF_KO_Rep1_clpd_tr_no_r_t_sno_sn_RNA.fastq /data/users/lwuetschert/rnaseq_course/References/undesired_RNA.fasta - 
+RPF_KO_Rep2_clpd_tr.fastq.gz
+Could not locate a Bowtie index corresponding to basename "/data/users/lwuetschert/rnaseq_course/References/undesired_RNA.fasta"
+Overall time: 00:00:00
+Command: bowtie-align --wrapper basic-0 -t -S -p 4 --un RPF_KO_Rep2_clpd_tr_no_r_t_sno_sn_RNA.fastq /data/users/lwuetschert/rnaseq_course/References/undesired_RNA.fasta - 
+RPF_WT_Rep1_clpd_tr.fastq.gz
+Could not locate a Bowtie index corresponding to basename "/data/users/lwuetschert/rnaseq_course/References/undesired_RNA.fasta"
+Overall time: 00:00:00
+Command: bowtie-align --wrapper basic-0 -t -S -p 4 --un RPF_WT_Rep1_clpd_tr_no_r_t_sno_sn_RNA.fastq /data/users/lwuetschert/rnaseq_course/References/undesired_RNA.fasta - 
+RPF_WT_Rep2_clpd_tr.fastq.gz
+Could not locate a Bowtie index corresponding to basename "/data/users/lwuetschert/rnaseq_course/References/undesired_RNA.fasta"
+Overall time: 00:00:00
+Command: bowtie-align --wrapper basic-0 -t -S -p 4 --un RPF_WT_Rep2_clpd_tr_no_r_t_sno_sn_RNA.fastq /data/users/lwuetschert/rnaseq_course/References/undesired_RNA.fasta - 
