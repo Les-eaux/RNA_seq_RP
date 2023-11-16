@@ -1,0 +1,9 @@
+# ignore output files
+*.out
+
+# ignore fasta, gz, html and txt files
+*.fa
+*.fasta
+*.txt
+*.html
+*.gz
