@@ -13,14 +13,16 @@ READS_DIR=/data/users/lwuetschert/rnaseq_course/RNA_fastq
 
 cd $READS_DIR
 
-module load UHTS/Aligner/bowtie/1.2.0
+module load UHTS/Aligner/bowtie/0.12.9
 
-for x in $(ls -d *tr.fastq.gz); \
-do echo ${x}; \
-gunzip -cd ${x} | \
-bowtie \
--S \
--t \
--p 4 \
-$REFS_DIR/GRCh38_p13_r_t_sno_sn_RNA_ENSEMBL_NCBI_GtRNAdb - \
---un $(basename ${x} .fastq.gz)_no_r_t_sno_sn_RNA.fastq 2> $(basename ${x} .fastq.gz)_no_r_t_sno_sn_RNA_log.txt > /dev/null; done
+zcat RPF_KO_Rep1_clpd_tr.fastq.gz | bowtie -S -t $REFS_DIR/GRCh38_p13_r_t_sno_sn_RNA_ENSEMBL_NCBI_GtRNAdb - \
+--un RPF_KO_Rep1_clpd_tr_no_r_t_sno_sn_RNA.fastq 2> RPF_KO_Rep1_clpd_tr_no_r_t_sno_sn_RNA_log.txt > /dev/null
+
+zcat RPF_KO_Rep2_clpd_tr.fastq.gz | bowtie -S -t $REFS_DIR/GRCh38_p13_r_t_sno_sn_RNA_ENSEMBL_NCBI_GtRNAdb - \
+--un RPF_KO_Rep2_clpd_tr_no_r_t_sno_sn_RNA.fastq 2> RPF_KO_Rep2_clpd_tr_no_r_t_sno_sn_RNA_log.txt > /dev/null
+
+zcat RPF_WT_Rep1_clpd_tr.fastq.gz | bowtie -S -t $REFS_DIR/GRCh38_p13_r_t_sno_sn_RNA_ENSEMBL_NCBI_GtRNAdb - \
+--un RPF_WT_Rep1_clpd_tr_no_r_t_sno_sn_RNA.fastq 2> RPF_WT_Rep1_clpd_tr_no_r_t_sno_sn_RNA_log.txt > /dev/null
+
+zcat RPF_WT_Rep2_clpd_tr.fastq.gz | bowtie -S -t $REFS_DIR/GRCh38_p13_r_t_sno_sn_RNA_ENSEMBL_NCBI_GtRNAdb - \
+--un RPF_WT_Rep2_clpd_tr_no_r_t_sno_sn_RNA.fastq 2> RPF_WT_Rep2_clpd_tr_no_r_t_sno_sn_RNA_log.txt > /dev/null
