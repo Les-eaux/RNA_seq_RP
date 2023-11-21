@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-READS_DIR=/data/users/lwuetschert/rnaseq_course/RNA_fastq
+READS_DIR=/data/users/lwuetschert/rnaseq_course/outputFiles
 
 #SBATCH --cpus-per-task=1    #cores
 #SBATCH --time=01:00:00       #time limit
