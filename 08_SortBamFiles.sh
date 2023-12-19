@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-READS_DIR=/data/users/lwuetschert/rnaseq_course/outputFiles
-
 #SBATCH --cpus-per-task=4    #cores
 #SBATCH --time=01:00:00       #time limit
 #SBATCH --mem-per-cpu=25000M     #requested memory
@@ -11,6 +9,8 @@ READS_DIR=/data/users/lwuetschert/rnaseq_course/outputFiles
 #SBATCH --mail-user=Leo.Wuetschert@unifr.ch
 #SBATCH --mail-type=begin,end
 #SBATCH --partition=pall
+
+READS_DIR=/data/users/lwuetschert/rnaseq_course/outputFiles
 
 cd $READS_DIR
 

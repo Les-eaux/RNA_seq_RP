@@ -1,8 +1,5 @@
 #!/usr/bin/env bash
 
-REFS_DIR=/data/users/lwuetschert/rnaseq_course/References
-READS_DIR=/data/users/lwuetschert/rnaseq_course/outputFiles
-
 #SBATCH --cpus-per-task=1    #cores
 #SBATCH --time=03:00:00       #time limit
 #SBATCH --mem-per-cpu=8000M     #requested memory
@@ -10,6 +7,9 @@ READS_DIR=/data/users/lwuetschert/rnaseq_course/outputFiles
 #SBATCH --error=/data/users/lwuetschert/rnaseq_course/fastqc_error_%j.e          #error
 #SBATCH --job-name=rnaseq_RP_BowtieIndex   #job name
 #SBATCH --partition=pall
+
+REFS_DIR=/data/users/lwuetschert/rnaseq_course/References
+READS_DIR=/data/users/lwuetschert/rnaseq_course/outputFiles
 
 cd $READS_DIR
 
